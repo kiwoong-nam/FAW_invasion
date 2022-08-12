@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#SBATCH --mem=50G
+
+cd /home/knam/work/sfrugiperda_SNP/mt/ref
+
+/home/knam/save/programs/bowtie2-2.3.4.1-linux-x86_64/bowtie2 -x sfmt -1 /home/knam/save/fq/PR14.filtered.paired.1.fq.gz -2 /home/knam/save/fq/PR14.filtered.paired.2.fq.gz | /home/knam/save/programs/samtools-1.9/samtools view -F 4 -b -h -o ../bam.2/PR14.raw.bam
+
+cd ../bam.2
+
+/home/knam/save/programs/samtools-1.9/samtools sort -o PR14.sorted.bam PR14.raw.bam
+
+#rm PR14.raw.bam
+
+java -Xmx10g -Djava.io.tmpdir=temp.PR14 -jar /home/knam/save/programs/picard.jar MarkDuplicates INPUT=PR14.sorted.bam OUTPUT=PR14.dupl_rm.bam REMOVE_DUPLICATES=true METRICS_FILE=PR14.metricN.log ASSUME_SORTED=True MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=1000 
+
+#rm -rf temp.PR14
+#rm PR14.sorted.bam
+
+java -Xmx10g -Djava.io.tmpdir=temp.PR14 -jar /home/knam/save/programs/picard.jar AddOrReplaceReadGroups INPUT=PR14.dupl_rm.bam OUTPUT=PR14.bam RGID=PR14 RGLB=lib1 RGPL=illumina RGPU=unit1 RGSM=PR14;
+
+#rm -rf temp.PR14
+#rm PR14.dupl_rm.bam
+
+#/home/knam/save/programs/samtools-1.9/samtools index PR14.bam
+#/home/knam/save/programs/samtools-1.9/samtools stats PR14.bam > PR14.stats

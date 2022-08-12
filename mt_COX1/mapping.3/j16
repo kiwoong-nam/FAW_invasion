@@ -1,0 +1,25 @@
+#!/bin/bash
+#SBATCH --mem=20G
+
+cd /home/knam/work/sfrugiperda_SNP/mt/ref
+
+/home/knam/save/programs/bowtie2-2.3.4.1-linux-x86_64/bowtie2 -x sfmt -1 /home/knam/work/processing_fq/sfrugi_AUS/processed/CC44.pair1.truncated.gz -2 /home/knam/work/processing_fq/sfrugi_AUS/processed/CC44.pair2.truncated.gz | /home/knam/save/programs/samtools-1.9/samtools view -F 4 -b -h -o ../bam.3/CC44.raw.bam
+
+cd ../bam.3
+
+/home/knam/save/programs/samtools-1.9/samtools sort -o CC44.sorted.bam CC44.raw.bam
+
+rm CC44.raw.bam
+
+java -Xmx4g -Djava.io.tmpdir=temp.CC44 -jar /home/knam/save/programs/picard.jar MarkDuplicates INPUT=CC44.sorted.bam OUTPUT=CC44.dupl_rm.bam REMOVE_DUPLICATES=true METRICS_FILE=CC44.metricN.log ASSUME_SORTED=True MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=1000 
+
+rm -rf temp.CC44
+rm CC44.sorted.bam
+
+java -Xmx4g -Djava.io.tmpdir=temp.CC44 -jar /home/knam/save/programs/picard.jar AddOrReplaceReadGroups INPUT=CC44.dupl_rm.bam OUTPUT=CC44.bam RGID=CC44 RGLB=lib1 RGPL=illumina RGPU=unit1 RGSM=CC44;
+
+rm -rf temp.CC44
+rm CC44.dupl_rm.bam
+
+/home/knam/save/programs/samtools-1.9/samtools index CC44.bam
+/home/knam/save/programs/samtools-1.9/samtools stats CC44.bam > CC44.stats

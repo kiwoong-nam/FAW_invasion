@@ -1,0 +1,23 @@
+#!/bin/bash
+#SBATCH --mem=50G #espace de stockage nécessaire pour exécuter le script
+cd /home/knam/work/sfrugiperda_SNP/nuc_1/ref # endroit où se trouve le génome de référence
+
+/home/knam/save/programs/bowtie2-2.3.4.1-linux-x86_64/bowtie2 --very-sensitive-local -x sfC.ver7 -1 /home/knam/work/processing_fq/sfrugi_AUS/processed/142m.pair1.truncated.gz -2 /home/knam/work/processing_fq/sfrugi_AUS/processed/142m.pair2.truncated.gz | /home/knam/save/programs/samtools-1.9/samtools view -b -h -o /home/knam/work/sfrugiperda_SNP/nuc_3/bam/142m.raw.bam #Fichier BAM  brute à partir de fichiers Fastq : 142m.pair1.truncated.gz et 142m.pair2.truncated.gz
+cd /home/knam/work/sfrugiperda_SNP/nuc_3/bam
+
+/home/knam/save/programs/samtools-1.9/samtools sort -o 142m.sorted.bam 142m.raw.bam #Fichiers BAM filtré
+
+rm 142m.raw.bam #Supprime fichier BAM brute
+
+java -Xmx4g -Djava.io.tmpdir=temp.142m -jar /home/knam/save/programs/picard.jar MarkDuplicates INPUT=142m.sorted.bam OUTPUT=142m.dupl_rm.bam REMOVE_DUPLICATES=true METRICS_FILE=142m.metricN.log ASSUME_SORTED=True MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=1000 #Suppression des erreur de PCR, création d'un nouveau fichier : 142m.dupl_rm.bam 
+
+rm -rf temp.142m # supprime fichier temp.
+rm 142m.sorted.bam # supprime fichier BAM filtré
+
+java -Xmx4g -Djava.io.tmpdir=temp.142m -jar /home/knam/save/programs/picard.jar AddOrReplaceReadGroups INPUT=142m.dupl_rm.bam OUTPUT=142m.bam RGID=142m RGLB=lib1 RGPL=illumina RGPU=unit1 RGSM=142m; #renomme fichier BAM : 142m.dupl_rm.bam en 142m.bam 
+
+rm -rf temp.142m # supprime fichier temp.
+rm 142m.dupl_rm.bam #supprime fichier généré suite au correction des duplicats de PCR
+
+/home/knam/save/programs/samtools-1.9/samtools index 142m.bam # Fichier BAM indexé
+/home/knam/save/programs/samtools-1.9/samtools stats 142m.bam > 142m.stats # Calcul statistique d'alignement

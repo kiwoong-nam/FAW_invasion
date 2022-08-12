@@ -1,0 +1,25 @@
+#!/bin/bash
+#SBATCH --mem=50G
+
+cd /home/knam/work/sfrugiperda_SNP/nuc_1/ref
+
+/home/knam/save/programs/bowtie2-2.3.4.1-linux-x86_64/bowtie2 --very-sensitive-local -x sfC.ver7 -1 /home/knam/work/sfrugiperda_SNP/fq/BCW1.pair1.truncated.gz -2 /home/knam/work/sfrugiperda_SNP/fq/BCW1.pair2.truncated.gz | /home/knam/save/programs/samtools-1.9/samtools view -b -h -o ../bam/BCW1.raw.bam
+
+cd ../bam
+
+/home/knam/save/programs/samtools-1.9/samtools sort -o BCW1.sorted.bam BCW1.raw.bam
+
+rm BCW1.raw.bam
+
+java -Xmx4g -Djava.io.tmpdir=temp.BCW1 -jar /home/knam/save/programs/picard.jar MarkDuplicates INPUT=BCW1.sorted.bam OUTPUT=BCW1.dupl_rm.bam REMOVE_DUPLICATES=true METRICS_FILE=BCW1.metricN.log ASSUME_SORTED=True MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=1000 
+
+rm -rf temp.BCW1
+rm BCW1.sorted.bam
+
+java -Xmx4g -Djava.io.tmpdir=temp.BCW1 -jar /home/knam/save/programs/picard.jar AddOrReplaceReadGroups INPUT=BCW1.dupl_rm.bam OUTPUT=BCW1.bam RGID=BCW1 RGLB=lib1 RGPL=illumina RGPU=unit1 RGSM=BCW1;
+
+rm -rf temp.BCW1
+rm BCW1.dupl_rm.bam
+
+/home/knam/save/programs/samtools-1.9/samtools index BCW1.bam
+/home/knam/save/programs/samtools-1.9/samtools stats BCW1.bam > BCW1.stats

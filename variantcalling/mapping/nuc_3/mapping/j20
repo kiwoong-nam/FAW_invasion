@@ -1,0 +1,25 @@
+#!/bin/bash
+#SBATCH --mem=50G
+
+cd /home/knam/work/sfrugiperda_SNP/nuc_1/ref
+
+/home/knam/save/programs/bowtie2-2.3.4.1-linux-x86_64/bowtie2 --very-sensitive-local -x sfC.ver7 -1 /home/knam/work/processing_fq/sfrugi_AUS/processed/CC77.pair1.truncated.gz -2 /home/knam/work/processing_fq/sfrugi_AUS/processed/CC77.pair2.truncated.gz | /home/knam/save/programs/samtools-1.9/samtools view -b -h -o /home/knam/work/sfrugiperda_SNP/nuc_3/bam/CC77.raw.bam
+
+cd /home/knam/work/sfrugiperda_SNP/nuc_3/bam
+
+/home/knam/save/programs/samtools-1.9/samtools sort -o CC77.sorted.bam CC77.raw.bam
+
+rm CC77.raw.bam
+
+java -Xmx4g -Djava.io.tmpdir=temp.CC77 -jar /home/knam/save/programs/picard.jar MarkDuplicates INPUT=CC77.sorted.bam OUTPUT=CC77.dupl_rm.bam REMOVE_DUPLICATES=true METRICS_FILE=CC77.metricN.log ASSUME_SORTED=True MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=1000 
+
+rm -rf temp.CC77
+rm CC77.sorted.bam
+
+java -Xmx4g -Djava.io.tmpdir=temp.CC77 -jar /home/knam/save/programs/picard.jar AddOrReplaceReadGroups INPUT=CC77.dupl_rm.bam OUTPUT=CC77.bam RGID=CC77 RGLB=lib1 RGPL=illumina RGPU=unit1 RGSM=CC77;
+
+rm -rf temp.CC77
+rm CC77.dupl_rm.bam
+
+/home/knam/save/programs/samtools-1.9/samtools index CC77.bam
+/home/knam/save/programs/samtools-1.9/samtools stats CC77.bam > CC77.stats

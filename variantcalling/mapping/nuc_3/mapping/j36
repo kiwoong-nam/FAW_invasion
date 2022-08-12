@@ -1,0 +1,25 @@
+#!/bin/bash
+#SBATCH --mem=50G
+
+cd /home/knam/work/sfrugiperda_SNP/nuc_1/ref
+
+/home/knam/save/programs/bowtie2-2.3.4.1-linux-x86_64/bowtie2 --very-sensitive-local -x sfC.ver7 -1 /home/knam/work/processing_fq/sfrugi_AUS/processed/Mal2.pair1.truncated.gz -2 /home/knam/work/processing_fq/sfrugi_AUS/processed/Mal2.pair2.truncated.gz | /home/knam/save/programs/samtools-1.9/samtools view -b -h -o /home/knam/work/sfrugiperda_SNP/nuc_3/bam/Mal2.raw.bam
+
+cd /home/knam/work/sfrugiperda_SNP/nuc_3/bam
+
+/home/knam/save/programs/samtools-1.9/samtools sort -o Mal2.sorted.bam Mal2.raw.bam
+
+rm Mal2.raw.bam
+
+java -Xmx4g -Djava.io.tmpdir=temp.Mal2 -jar /home/knam/save/programs/picard.jar MarkDuplicates INPUT=Mal2.sorted.bam OUTPUT=Mal2.dupl_rm.bam REMOVE_DUPLICATES=true METRICS_FILE=Mal2.metricN.log ASSUME_SORTED=True MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=1000 
+
+rm -rf temp.Mal2
+rm Mal2.sorted.bam
+
+java -Xmx4g -Djava.io.tmpdir=temp.Mal2 -jar /home/knam/save/programs/picard.jar AddOrReplaceReadGroups INPUT=Mal2.dupl_rm.bam OUTPUT=Mal2.bam RGID=Mal2 RGLB=lib1 RGPL=illumina RGPU=unit1 RGSM=Mal2;
+
+rm -rf temp.Mal2
+rm Mal2.dupl_rm.bam
+
+/home/knam/save/programs/samtools-1.9/samtools index Mal2.bam
+/home/knam/save/programs/samtools-1.9/samtools stats Mal2.bam > Mal2.stats

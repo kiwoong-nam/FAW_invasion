@@ -1,0 +1,17 @@
+sbatch /home/knam/work/sfrugiperda_SNP/nuc_4/script/mapping/j.mex0
+sbatch /home/knam/work/sfrugiperda_SNP/nuc_4/script/mapping/j.mex1
+sbatch /home/knam/work/sfrugiperda_SNP/nuc_4/script/mapping/j.mex2
+sbatch /home/knam/work/sfrugiperda_SNP/nuc_4/script/mapping/j.mex3
+sbatch /home/knam/work/sfrugiperda_SNP/nuc_4/script/mapping/j.mex4
+sbatch /home/knam/work/sfrugiperda_SNP/nuc_4/script/mapping/j.mex5
+sbatch /home/knam/work/sfrugiperda_SNP/nuc_4/script/mapping/j.mex6
+sbatch /home/knam/work/sfrugiperda_SNP/nuc_4/script/mapping/j.mex7
+sbatch /home/knam/work/sfrugiperda_SNP/nuc_4/script/mapping/j.mex8
+sbatch /home/knam/work/sfrugiperda_SNP/nuc_4/script/mapping/j.mex9
+sbatch /home/knam/work/sfrugiperda_SNP/nuc_4/script/mapping/j.mex10
+sbatch /home/knam/work/sfrugiperda_SNP/nuc_4/script/mapping/j.mex11
+sbatch /home/knam/work/sfrugiperda_SNP/nuc_4/script/mapping/j.mex12
+sbatch /home/knam/work/sfrugiperda_SNP/nuc_4/script/mapping/j.mex13
+sbatch /home/knam/work/sfrugiperda_SNP/nuc_4/script/mapping/j.mex14
+sbatch /home/knam/work/sfrugiperda_SNP/nuc_4/script/mapping/j.mex15
+sbatch /home/knam/work/sfrugiperda_SNP/nuc_4/script/mapping/j.mex16

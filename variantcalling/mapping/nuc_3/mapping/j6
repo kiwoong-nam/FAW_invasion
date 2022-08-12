@@ -1,0 +1,25 @@
+#!/bin/bash
+#SBATCH --mem=50G
+
+cd /home/knam/work/sfrugiperda_SNP/nuc_1/ref
+
+/home/knam/save/programs/bowtie2-2.3.4.1-linux-x86_64/bowtie2 --very-sensitive-local -x sfC.ver7 -1 /home/knam/work/processing_fq/sfrugi_AUS/processed/337K.pair1.truncated.gz -2 /home/knam/work/processing_fq/sfrugi_AUS/processed/337K.pair2.truncated.gz | /home/knam/save/programs/samtools-1.9/samtools view -b -h -o /home/knam/work/sfrugiperda_SNP/nuc_3/bam/337K.raw.bam
+
+cd /home/knam/work/sfrugiperda_SNP/nuc_3/bam
+
+/home/knam/save/programs/samtools-1.9/samtools sort -o 337K.sorted.bam 337K.raw.bam
+
+rm 337K.raw.bam
+
+java -Xmx4g -Djava.io.tmpdir=temp.337K -jar /home/knam/save/programs/picard.jar MarkDuplicates INPUT=337K.sorted.bam OUTPUT=337K.dupl_rm.bam REMOVE_DUPLICATES=true METRICS_FILE=337K.metricN.log ASSUME_SORTED=True MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=1000 
+
+rm -rf temp.337K
+rm 337K.sorted.bam
+
+java -Xmx4g -Djava.io.tmpdir=temp.337K -jar /home/knam/save/programs/picard.jar AddOrReplaceReadGroups INPUT=337K.dupl_rm.bam OUTPUT=337K.bam RGID=337K RGLB=lib1 RGPL=illumina RGPU=unit1 RGSM=337K;
+
+rm -rf temp.337K
+rm 337K.dupl_rm.bam
+
+/home/knam/save/programs/samtools-1.9/samtools index 337K.bam
+/home/knam/save/programs/samtools-1.9/samtools stats 337K.bam > 337K.stats

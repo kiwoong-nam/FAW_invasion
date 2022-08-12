@@ -1,0 +1,10 @@
+#!/bin/bash
+#SBATCH -c 4
+#SBATCH --mem=40G
+#SBATCH -p unlimitq
+
+cd /home/knam/work/sfrugiperda_SNP/nuc_2/gvcf
+
+/home/knam/save/programs/samtools-1.9/samtools index ../bam/PR33.bam
+
+/home/knam/save/programs/gatk-4.1.2.0/gatk HaplotypeCaller -R /home/knam/work/sfrugiperda_SNP/nuc_2/ref/sfC.ver7.fa -I ../bam/PR33.bam -O PR33.g.vcf.gz -ERC GVCF

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd /home/kiwoong/Desktop/sfrugiperda_SNP/nuc_2/gvcf
+
+/home/kiwoong/bioinformatics/gatk-4.1.2.0/gatk HaplotypeCaller -R /home/kiwoong/Desktop/sfrugiperda_SNP/nuc_2/ref/sfC.ver7.fa -I ../bam/PR30.bam -O PR30.g.vcf.gz -ERC GVCF
+
+

@@ -1,0 +1,25 @@
+#!/bin/bash
+#SBATCH --mem=50G
+
+cd /home/knam/work/sfrugiperda_SNP/nuc_2/ref
+
+/home/knam/save/programs/bowtie2-2.3.4.1-linux-x86_64/bowtie2  --very-sensitive-local -x sfC.ver7 -1 /home/knam/work/fq/FL.17.filtered.paired.1.fq.gz -2 /home/knam/work/fq/FL.17.filtered.paired.2.fq.gz | /home/knam/save/programs/samtools-1.9/samtools view -b -h -o ../bam/FL.17.raw.bam
+
+cd ../bam
+
+/home/knam/save/programs/samtools-1.9/samtools sort -o FL.17.sorted.bam FL.17.raw.bam
+
+rm FL.17.raw.bam
+
+java -Xmx4g -Djava.io.tmpdir=temp.FL.17 -jar /home/knam/save/programs/picard.jar MarkDuplicates INPUT=FL.17.sorted.bam OUTPUT=FL.17.dupl_rm.bam REMOVE_DUPLICATES=true METRICS_FILE=FL.17.metricN.log ASSUME_SORTED=True MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=1000 
+
+rm -rf temp.FL.17
+rm FL.17.sorted.bam
+
+java -Xmx4g -Djava.io.tmpdir=temp.FL.17 -jar /home/knam/save/programs/picard.jar AddOrReplaceReadGroups INPUT=FL.17.dupl_rm.bam OUTPUT=FL.17.bam RGID=FL.17 RGLB=lib1 RGPL=illumina RGPU=unit1 RGSM=FL.17;
+
+rm -rf temp.FL.17
+rm FL.17.dupl_rm.bam
+
+/home/knam/save/programs/samtools-1.9/samtools index FL.17.bam
+/home/knam/save/programs/samtools-1.9/samtools stats FL.17.bam > FL.17.stats

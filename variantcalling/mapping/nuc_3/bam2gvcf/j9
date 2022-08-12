@@ -1,0 +1,8 @@
+#!/bin/bash
+#SBATCH -p unlimitq
+#SBATCH -c 4
+#SBATCH --mem=40G
+
+cd /home/knam/work/sfrugiperda_SNP/nuc_3/gvcf
+
+/home/knam/save/programs/gatk-4.1.2.0/gatk HaplotypeCaller -R /home/knam/work/sfrugiperda_SNP/nuc_1/ref/sfC.ver7.fa -I ../bam/CC69.bam -O CC69.g.vcf.gz -ERC GVCF

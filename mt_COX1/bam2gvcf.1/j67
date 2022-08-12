@@ -1,0 +1,9 @@
+#!/bin/bash
+#SBATCH -c 4
+#SBATCH --mem=20G
+#SBATCH -p unlimitq
+
+cd /home/knam/work/sfrugiperda_SNP/mt/gvcf.1
+
+/home/knam/save/programs/gatk-4.1.2.0/gatk HaplotypeCaller -R /home/knam/work/sfrugiperda_SNP/mt/ref/sfmt.ref.smrt.fa -I ../bam.1/MS_R_R3.bam -O MS_R_R3.g.vcf.gz -ERC GVCF
+#/home/knam/save/programs/htslib-1.9/bgzip -f MS_R_R3.g.vcf

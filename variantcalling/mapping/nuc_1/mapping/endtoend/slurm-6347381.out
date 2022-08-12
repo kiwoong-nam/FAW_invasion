@@ -1,0 +1,247 @@
+42878440 reads; of these:
+  42878440 (100.00%) were paired; of these:
+    21363671 (49.82%) aligned concordantly 0 times
+    15944040 (37.18%) aligned concordantly exactly 1 time
+    5570729 (12.99%) aligned concordantly >1 times
+    ----
+    21363671 pairs aligned concordantly 0 times; of these:
+      1435602 (6.72%) aligned discordantly 1 time
+    ----
+    19928069 pairs aligned 0 times concordantly or discordantly; of these:
+      39856138 mates make up the pairs; of these:
+        32590822 (81.77%) aligned 0 times
+        5095725 (12.79%) aligned exactly 1 time
+        2169591 (5.44%) aligned >1 times
+62.00% overall alignment rate
+[bam_sort_core] merging from 33 files and 1 in-memory blocks...
+[Wed Jul 03 22:17:57 CEST 2019] picard.sam.markduplicates.MarkDuplicates MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=1000 INPUT=[MS_R_R8.sorted.bam] OUTPUT=MS_R_R8.dupl_rm.bam METRICS_FILE=MS_R_R8.metricN.log REMOVE_DUPLICATES=true ASSUME_SORTED=true    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Wed Jul 03 22:17:57 CEST 2019] Executing as knam@node058 on Linux 3.10.0-514.26.2.el7.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_102-b14; Picard version: 2.9.4-SNAPSHOT
+INFO	2019-07-03 22:17:58	MarkDuplicates	Start of doWork freeMemory: 2031682168; totalMemory: 2058354688; maxMemory: 3817865216
+INFO	2019-07-03 22:17:58	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2019-07-03 22:17:58	MarkDuplicates	Will retain up to 13832844 data points before spilling to disk.
+INFO	2019-07-03 22:18:15	MarkDuplicates	Read     1,000,000 records.  Elapsed time: 00:00:16s.  Time for last 1,000,000:   16s.  Last read position: HiC_scaffold_1:6,426,597
+INFO	2019-07-03 22:18:15	MarkDuplicates	Tracking 15806 as yet unmatched pairs. 281 records in RAM.
+INFO	2019-07-03 22:18:24	MarkDuplicates	Read     2,000,000 records.  Elapsed time: 00:00:25s.  Time for last 1,000,000:    9s.  Last read position: HiC_scaffold_2:242,503
+INFO	2019-07-03 22:18:24	MarkDuplicates	Tracking 33878 as yet unmatched pairs. 1155 records in RAM.
+INFO	2019-07-03 22:18:36	MarkDuplicates	Read     3,000,000 records.  Elapsed time: 00:00:37s.  Time for last 1,000,000:   11s.  Last read position: HiC_scaffold_2:6,876,672
+INFO	2019-07-03 22:18:36	MarkDuplicates	Tracking 49198 as yet unmatched pairs. 875 records in RAM.
+INFO	2019-07-03 22:18:45	MarkDuplicates	Read     4,000,000 records.  Elapsed time: 00:00:46s.  Time for last 1,000,000:    9s.  Last read position: HiC_scaffold_3:70,989
+INFO	2019-07-03 22:18:45	MarkDuplicates	Tracking 66032 as yet unmatched pairs. 2679 records in RAM.
+INFO	2019-07-03 22:18:55	MarkDuplicates	Read     5,000,000 records.  Elapsed time: 00:00:57s.  Time for last 1,000,000:   10s.  Last read position: HiC_scaffold_3:6,235,076
+INFO	2019-07-03 22:18:55	MarkDuplicates	Tracking 79962 as yet unmatched pairs. 1983 records in RAM.
+INFO	2019-07-03 22:19:04	MarkDuplicates	Read     6,000,000 records.  Elapsed time: 00:01:05s.  Time for last 1,000,000:    8s.  Last read position: HiC_scaffold_3:11,725,776
+INFO	2019-07-03 22:19:04	MarkDuplicates	Tracking 96628 as yet unmatched pairs. 667 records in RAM.
+INFO	2019-07-03 22:19:14	MarkDuplicates	Read     7,000,000 records.  Elapsed time: 00:01:15s.  Time for last 1,000,000:    9s.  Last read position: HiC_scaffold_4:3,938,715
+INFO	2019-07-03 22:19:14	MarkDuplicates	Tracking 111068 as yet unmatched pairs. 2984 records in RAM.
+INFO	2019-07-03 22:19:22	MarkDuplicates	Read     8,000,000 records.  Elapsed time: 00:01:23s.  Time for last 1,000,000:    8s.  Last read position: HiC_scaffold_4:9,578,775
+INFO	2019-07-03 22:19:22	MarkDuplicates	Tracking 122311 as yet unmatched pairs. 1648 records in RAM.
+INFO	2019-07-03 22:19:33	MarkDuplicates	Read     9,000,000 records.  Elapsed time: 00:01:34s.  Time for last 1,000,000:   10s.  Last read position: HiC_scaffold_5:929,107
+INFO	2019-07-03 22:19:33	MarkDuplicates	Tracking 134791 as yet unmatched pairs. 3909 records in RAM.
+INFO	2019-07-03 22:19:41	MarkDuplicates	Read    10,000,000 records.  Elapsed time: 00:01:42s.  Time for last 1,000,000:    8s.  Last read position: HiC_scaffold_5:7,302,190
+INFO	2019-07-03 22:19:41	MarkDuplicates	Tracking 147534 as yet unmatched pairs. 2002 records in RAM.
+INFO	2019-07-03 22:19:50	MarkDuplicates	Read    11,000,000 records.  Elapsed time: 00:01:51s.  Time for last 1,000,000:    9s.  Last read position: HiC_scaffold_6:2,295,516
+INFO	2019-07-03 22:19:50	MarkDuplicates	Tracking 161432 as yet unmatched pairs. 4129 records in RAM.
+INFO	2019-07-03 22:19:58	MarkDuplicates	Read    12,000,000 records.  Elapsed time: 00:02:00s.  Time for last 1,000,000:    8s.  Last read position: HiC_scaffold_6:9,942,014
+INFO	2019-07-03 22:19:58	MarkDuplicates	Tracking 178666 as yet unmatched pairs. 248 records in RAM.
+INFO	2019-07-03 22:20:07	MarkDuplicates	Read    13,000,000 records.  Elapsed time: 00:02:08s.  Time for last 1,000,000:    8s.  Last read position: HiC_scaffold_7:5,654,185
+INFO	2019-07-03 22:20:07	MarkDuplicates	Tracking 189524 as yet unmatched pairs. 4453 records in RAM.
+INFO	2019-07-03 22:20:49	MarkDuplicates	Read    14,000,000 records.  Elapsed time: 00:02:50s.  Time for last 1,000,000:   41s.  Last read position: HiC_scaffold_7:11,776,391
+INFO	2019-07-03 22:20:49	MarkDuplicates	Tracking 198998 as yet unmatched pairs. 1063 records in RAM.
+INFO	2019-07-03 22:20:58	MarkDuplicates	Read    15,000,000 records.  Elapsed time: 00:02:59s.  Time for last 1,000,000:    9s.  Last read position: HiC_scaffold_8:4,956,022
+INFO	2019-07-03 22:20:58	MarkDuplicates	Tracking 209260 as yet unmatched pairs. 5420 records in RAM.
+INFO	2019-07-03 22:21:19	MarkDuplicates	Read    16,000,000 records.  Elapsed time: 00:03:21s.  Time for last 1,000,000:   21s.  Last read position: HiC_scaffold_8:11,029,160
+INFO	2019-07-03 22:21:19	MarkDuplicates	Tracking 220897 as yet unmatched pairs. 255 records in RAM.
+INFO	2019-07-03 22:21:29	MarkDuplicates	Read    17,000,000 records.  Elapsed time: 00:03:30s.  Time for last 1,000,000:    9s.  Last read position: HiC_scaffold_9:5,614,338
+INFO	2019-07-03 22:21:29	MarkDuplicates	Tracking 228580 as yet unmatched pairs. 4509 records in RAM.
+INFO	2019-07-03 22:21:37	MarkDuplicates	Read    18,000,000 records.  Elapsed time: 00:03:39s.  Time for last 1,000,000:    8s.  Last read position: HiC_scaffold_9:12,332,898
+INFO	2019-07-03 22:21:37	MarkDuplicates	Tracking 236102 as yet unmatched pairs. 237 records in RAM.
+INFO	2019-07-03 22:21:47	MarkDuplicates	Read    19,000,000 records.  Elapsed time: 00:03:49s.  Time for last 1,000,000:    9s.  Last read position: HiC_scaffold_10:5,899,504
+INFO	2019-07-03 22:21:47	MarkDuplicates	Tracking 243968 as yet unmatched pairs. 6174 records in RAM.
+INFO	2019-07-03 22:21:56	MarkDuplicates	Read    20,000,000 records.  Elapsed time: 00:03:57s.  Time for last 1,000,000:    8s.  Last read position: HiC_scaffold_10:12,132,440
+INFO	2019-07-03 22:21:56	MarkDuplicates	Tracking 249884 as yet unmatched pairs. 1534 records in RAM.
+INFO	2019-07-03 22:22:06	MarkDuplicates	Read    21,000,000 records.  Elapsed time: 00:04:07s.  Time for last 1,000,000:    9s.  Last read position: HiC_scaffold_11:4,216,156
+INFO	2019-07-03 22:22:06	MarkDuplicates	Tracking 257104 as yet unmatched pairs. 8616 records in RAM.
+INFO	2019-07-03 22:22:15	MarkDuplicates	Read    22,000,000 records.  Elapsed time: 00:04:16s.  Time for last 1,000,000:    9s.  Last read position: HiC_scaffold_11:9,782,760
+INFO	2019-07-03 22:22:15	MarkDuplicates	Tracking 261266 as yet unmatched pairs. 4854 records in RAM.
+INFO	2019-07-03 22:22:50	MarkDuplicates	Read    23,000,000 records.  Elapsed time: 00:04:52s.  Time for last 1,000,000:   35s.  Last read position: HiC_scaffold_12:931,795
+INFO	2019-07-03 22:22:50	MarkDuplicates	Tracking 268097 as yet unmatched pairs. 36602 records in RAM.
+INFO	2019-07-03 22:22:59	MarkDuplicates	Read    24,000,000 records.  Elapsed time: 00:05:00s.  Time for last 1,000,000:    8s.  Last read position: HiC_scaffold_12:7,758,321
+INFO	2019-07-03 22:22:59	MarkDuplicates	Tracking 283722 as yet unmatched pairs. 28243 records in RAM.
+INFO	2019-07-03 22:23:08	MarkDuplicates	Read    25,000,000 records.  Elapsed time: 00:05:09s.  Time for last 1,000,000:    9s.  Last read position: HiC_scaffold_12:14,798,404
+INFO	2019-07-03 22:23:08	MarkDuplicates	Tracking 291674 as yet unmatched pairs. 15274 records in RAM.
+INFO	2019-07-03 22:23:18	MarkDuplicates	Read    26,000,000 records.  Elapsed time: 00:05:20s.  Time for last 1,000,000:   10s.  Last read position: HiC_scaffold_13:611,712
+INFO	2019-07-03 22:23:18	MarkDuplicates	Tracking 296470 as yet unmatched pairs. 14540 records in RAM.
+INFO	2019-07-03 22:23:28	MarkDuplicates	Read    27,000,000 records.  Elapsed time: 00:05:29s.  Time for last 1,000,000:    9s.  Last read position: HiC_scaffold_13:7,056,405
+INFO	2019-07-03 22:23:28	MarkDuplicates	Tracking 298626 as yet unmatched pairs. 8329 records in RAM.
+INFO	2019-07-03 22:23:36	MarkDuplicates	Read    28,000,000 records.  Elapsed time: 00:05:38s.  Time for last 1,000,000:    8s.  Last read position: HiC_scaffold_13:12,616,572
+INFO	2019-07-03 22:23:36	MarkDuplicates	Tracking 299858 as yet unmatched pairs. 2289 records in RAM.
+INFO	2019-07-03 22:23:47	MarkDuplicates	Read    29,000,000 records.  Elapsed time: 00:05:48s.  Time for last 1,000,000:   10s.  Last read position: HiC_scaffold_14:4,373,271
+INFO	2019-07-03 22:23:47	MarkDuplicates	Tracking 300268 as yet unmatched pairs. 13875 records in RAM.
+INFO	2019-07-03 22:23:56	MarkDuplicates	Read    30,000,000 records.  Elapsed time: 00:05:57s.  Time for last 1,000,000:    9s.  Last read position: HiC_scaffold_14:10,047,458
+INFO	2019-07-03 22:23:56	MarkDuplicates	Tracking 300534 as yet unmatched pairs. 7357 records in RAM.
+INFO	2019-07-03 22:24:18	MarkDuplicates	Read    31,000,000 records.  Elapsed time: 00:06:19s.  Time for last 1,000,000:   22s.  Last read position: HiC_scaffold_15:2,015,351
+INFO	2019-07-03 22:24:18	MarkDuplicates	Tracking 300698 as yet unmatched pairs. 15088 records in RAM.
+INFO	2019-07-03 22:24:26	MarkDuplicates	Read    32,000,000 records.  Elapsed time: 00:06:27s.  Time for last 1,000,000:    7s.  Last read position: HiC_scaffold_15:8,541,172
+INFO	2019-07-03 22:24:26	MarkDuplicates	Tracking 300648 as yet unmatched pairs. 6657 records in RAM.
+INFO	2019-07-03 22:24:37	MarkDuplicates	Read    33,000,000 records.  Elapsed time: 00:06:38s.  Time for last 1,000,000:   10s.  Last read position: HiC_scaffold_16:1,387,626
+INFO	2019-07-03 22:24:37	MarkDuplicates	Tracking 299478 as yet unmatched pairs. 18023 records in RAM.
+INFO	2019-07-03 22:24:45	MarkDuplicates	Read    34,000,000 records.  Elapsed time: 00:06:47s.  Time for last 1,000,000:    8s.  Last read position: HiC_scaffold_16:7,803,508
+INFO	2019-07-03 22:24:45	MarkDuplicates	Tracking 297657 as yet unmatched pairs. 7773 records in RAM.
+INFO	2019-07-03 22:26:06	MarkDuplicates	Read    35,000,000 records.  Elapsed time: 00:08:08s.  Time for last 1,000,000:   81s.  Last read position: HiC_scaffold_17:1,986,384
+INFO	2019-07-03 22:26:06	MarkDuplicates	Tracking 295028 as yet unmatched pairs. 19869 records in RAM.
+INFO	2019-07-03 22:26:15	MarkDuplicates	Read    36,000,000 records.  Elapsed time: 00:08:16s.  Time for last 1,000,000:    8s.  Last read position: HiC_scaffold_17:9,056,674
+INFO	2019-07-03 22:26:15	MarkDuplicates	Tracking 290366 as yet unmatched pairs. 5137 records in RAM.
+INFO	2019-07-03 22:26:26	MarkDuplicates	Read    37,000,000 records.  Elapsed time: 00:08:27s.  Time for last 1,000,000:   10s.  Last read position: HiC_scaffold_18:5,010,675
+INFO	2019-07-03 22:26:26	MarkDuplicates	Tracking 285694 as yet unmatched pairs. 12011 records in RAM.
+INFO	2019-07-03 22:26:35	MarkDuplicates	Read    38,000,000 records.  Elapsed time: 00:08:36s.  Time for last 1,000,000:    8s.  Last read position: HiC_scaffold_18:11,505,609
+INFO	2019-07-03 22:26:35	MarkDuplicates	Tracking 281881 as yet unmatched pairs. 2096 records in RAM.
+INFO	2019-07-03 22:26:45	MarkDuplicates	Read    39,000,000 records.  Elapsed time: 00:08:47s.  Time for last 1,000,000:   10s.  Last read position: HiC_scaffold_19:5,717,624
+INFO	2019-07-03 22:26:45	MarkDuplicates	Tracking 276746 as yet unmatched pairs. 12563 records in RAM.
+INFO	2019-07-03 22:26:54	MarkDuplicates	Read    40,000,000 records.  Elapsed time: 00:08:55s.  Time for last 1,000,000:    8s.  Last read position: HiC_scaffold_19:11,760,291
+INFO	2019-07-03 22:26:54	MarkDuplicates	Tracking 271726 as yet unmatched pairs. 2271 records in RAM.
+INFO	2019-07-03 22:27:05	MarkDuplicates	Read    41,000,000 records.  Elapsed time: 00:09:06s.  Time for last 1,000,000:   10s.  Last read position: HiC_scaffold_20:5,223,546
+INFO	2019-07-03 22:27:05	MarkDuplicates	Tracking 266142 as yet unmatched pairs. 13955 records in RAM.
+INFO	2019-07-03 22:27:16	MarkDuplicates	Read    42,000,000 records.  Elapsed time: 00:09:17s.  Time for last 1,000,000:   11s.  Last read position: HiC_scaffold_21:1,087,463
+INFO	2019-07-03 22:27:16	MarkDuplicates	Tracking 257491 as yet unmatched pairs. 23222 records in RAM.
+INFO	2019-07-03 22:27:24	MarkDuplicates	Read    43,000,000 records.  Elapsed time: 00:09:26s.  Time for last 1,000,000:    8s.  Last read position: HiC_scaffold_21:7,293,153
+INFO	2019-07-03 22:27:24	MarkDuplicates	Tracking 250960 as yet unmatched pairs. 11810 records in RAM.
+INFO	2019-07-03 22:27:36	MarkDuplicates	Read    44,000,000 records.  Elapsed time: 00:09:38s.  Time for last 1,000,000:   11s.  Last read position: HiC_scaffold_22:145,451
+INFO	2019-07-03 22:27:36	MarkDuplicates	Tracking 243944 as yet unmatched pairs. 31820 records in RAM.
+INFO	2019-07-03 22:27:45	MarkDuplicates	Read    45,000,000 records.  Elapsed time: 00:09:46s.  Time for last 1,000,000:    8s.  Last read position: HiC_scaffold_22:5,992,763
+INFO	2019-07-03 22:27:45	MarkDuplicates	Tracking 232355 as yet unmatched pairs. 13620 records in RAM.
+INFO	2019-07-03 22:27:57	MarkDuplicates	Read    46,000,000 records.  Elapsed time: 00:09:58s.  Time for last 1,000,000:   11s.  Last read position: HiC_scaffold_23:416,682
+INFO	2019-07-03 22:27:57	MarkDuplicates	Tracking 222840 as yet unmatched pairs. 17141 records in RAM.
+INFO	2019-07-03 22:28:15	MarkDuplicates	Read    47,000,000 records.  Elapsed time: 00:10:16s.  Time for last 1,000,000:   18s.  Last read position: HiC_scaffold_23:8,172,705
+INFO	2019-07-03 22:28:15	MarkDuplicates	Tracking 212388 as yet unmatched pairs. 2402 records in RAM.
+INFO	2019-07-03 22:28:27	MarkDuplicates	Read    48,000,000 records.  Elapsed time: 00:10:28s.  Time for last 1,000,000:   11s.  Last read position: HiC_scaffold_24:4,412,670
+INFO	2019-07-03 22:28:27	MarkDuplicates	Tracking 199892 as yet unmatched pairs. 17517 records in RAM.
+INFO	2019-07-03 22:29:09	MarkDuplicates	Read    49,000,000 records.  Elapsed time: 00:11:11s.  Time for last 1,000,000:   42s.  Last read position: HiC_scaffold_25:1,296,584
+INFO	2019-07-03 22:29:09	MarkDuplicates	Tracking 183930 as yet unmatched pairs. 25933 records in RAM.
+INFO	2019-07-03 22:29:17	MarkDuplicates	Read    50,000,000 records.  Elapsed time: 00:11:19s.  Time for last 1,000,000:    8s.  Last read position: HiC_scaffold_25:7,470,652
+INFO	2019-07-03 22:29:17	MarkDuplicates	Tracking 175026 as yet unmatched pairs. 15011 records in RAM.
+INFO	2019-07-03 22:29:26	MarkDuplicates	Read    51,000,000 records.  Elapsed time: 00:11:27s.  Time for last 1,000,000:    8s.  Last read position: HiC_scaffold_25:14,275,203
+INFO	2019-07-03 22:29:26	MarkDuplicates	Tracking 163080 as yet unmatched pairs. 487 records in RAM.
+INFO	2019-07-03 22:29:37	MarkDuplicates	Read    52,000,000 records.  Elapsed time: 00:11:39s.  Time for last 1,000,000:   11s.  Last read position: HiC_scaffold_26:7,210,676
+INFO	2019-07-03 22:29:37	MarkDuplicates	Tracking 143486 as yet unmatched pairs. 5919 records in RAM.
+INFO	2019-07-03 22:29:49	MarkDuplicates	Read    53,000,000 records.  Elapsed time: 00:11:51s.  Time for last 1,000,000:   11s.  Last read position: HiC_scaffold_27:4,467,251
+INFO	2019-07-03 22:29:49	MarkDuplicates	Tracking 128990 as yet unmatched pairs. 21583 records in RAM.
+INFO	2019-07-03 22:30:00	MarkDuplicates	Read    54,000,000 records.  Elapsed time: 00:12:01s.  Time for last 1,000,000:   10s.  Last read position: HiC_scaffold_27:10,347,479
+INFO	2019-07-03 22:30:00	MarkDuplicates	Tracking 118766 as yet unmatched pairs. 10113 records in RAM.
+INFO	2019-07-03 22:30:12	MarkDuplicates	Read    55,000,000 records.  Elapsed time: 00:12:13s.  Time for last 1,000,000:   12s.  Last read position: HiC_scaffold_28:2,555,389
+INFO	2019-07-03 22:30:12	MarkDuplicates	Tracking 99866 as yet unmatched pairs. 19754 records in RAM.
+INFO	2019-07-03 22:30:26	MarkDuplicates	Read    56,000,000 records.  Elapsed time: 00:12:27s.  Time for last 1,000,000:   14s.  Last read position: HiC_scaffold_29:2,891,685
+INFO	2019-07-03 22:30:26	MarkDuplicates	Tracking 74832 as yet unmatched pairs. 46536 records in RAM.
+INFO	2019-07-03 22:30:35	MarkDuplicates	Read    57,000,000 records.  Elapsed time: 00:12:36s.  Time for last 1,000,000:    8s.  Last read position: HiC_scaffold_29:11,333,182
+INFO	2019-07-03 22:30:35	MarkDuplicates	Tracking 56180 as yet unmatched pairs. 27405 records in RAM.
+INFO	2019-07-03 22:30:44	MarkDuplicates	Read    58,000,000 records.  Elapsed time: 00:12:46s.  Time for last 1,000,000:    9s.  Last read position: HiC_scaffold_40:10,479
+INFO	2019-07-03 22:30:44	MarkDuplicates	Tracking 28352 as yet unmatched pairs. 89 records in RAM.
+INFO	2019-07-03 22:30:56	MarkDuplicates	Read 58916340 records. 0 pairs never matched.
+INFO	2019-07-03 22:31:18	MarkDuplicates	After buildSortedReadEndLists freeMemory: 3736767592; totalMemory: 3765436416; maxMemory: 3817865216
+INFO	2019-07-03 22:31:18	MarkDuplicates	Will retain up to 119308288 duplicate indices before spilling to disk.
+INFO	2019-07-03 22:31:18	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2019-07-03 22:31:46	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2019-07-03 22:32:12	MarkDuplicates	Sorting list of duplicate records.
+INFO	2019-07-03 22:32:17	MarkDuplicates	After generateDuplicateIndexes freeMemory: 2776101152; totalMemory: 3758096384; maxMemory: 3817865216
+INFO	2019-07-03 22:32:17	MarkDuplicates	Marking 2912258 records as duplicates.
+INFO	2019-07-03 22:32:17	MarkDuplicates	Found 222 optical duplicate clusters.
+INFO	2019-07-03 22:32:17	MarkDuplicates	Reads are assumed to be ordered by: coordinate
+INFO	2019-07-03 22:35:45	MarkDuplicates	Written    10,000,000 records.  Elapsed time: 00:03:27s.  Time for last 10,000,000:  207s.  Last read position: HiC_scaffold_5:10,456,679
+INFO	2019-07-03 22:39:14	MarkDuplicates	Written    20,000,000 records.  Elapsed time: 00:06:56s.  Time for last 10,000,000:  209s.  Last read position: HiC_scaffold_11:3,950,049
+INFO	2019-07-03 22:42:43	MarkDuplicates	Written    30,000,000 records.  Elapsed time: 00:10:25s.  Time for last 10,000,000:  209s.  Last read position: HiC_scaffold_15:5,139,888
+INFO	2019-07-03 22:46:13	MarkDuplicates	Written    40,000,000 records.  Elapsed time: 00:13:55s.  Time for last 10,000,000:  209s.  Last read position: HiC_scaffold_21:761,845
+INFO	2019-07-03 22:49:42	MarkDuplicates	Written    50,000,000 records.  Elapsed time: 00:17:24s.  Time for last 10,000,000:  209s.  Last read position: HiC_scaffold_27:1,294,428
+INFO	2019-07-03 22:52:58	MarkDuplicates	Written    60,000,000 records.  Elapsed time: 00:20:40s.  Time for last 10,000,000:  195s.  Last read position: */*
+INFO	2019-07-03 22:55:56	MarkDuplicates	Written    70,000,000 records.  Elapsed time: 00:23:38s.  Time for last 10,000,000:  177s.  Last read position: */*
+INFO	2019-07-03 22:58:55	MarkDuplicates	Written    80,000,000 records.  Elapsed time: 00:26:37s.  Time for last 10,000,000:  179s.  Last read position: */*
+INFO	2019-07-03 22:59:46	MarkDuplicates	Before output close freeMemory: 3815771880; totalMemory: 3847225344; maxMemory: 3847225344
+INFO	2019-07-03 22:59:47	MarkDuplicates	After output close freeMemory: 3815757280; totalMemory: 3847225344; maxMemory: 3847225344
+[Wed Jul 03 22:59:47 CEST 2019] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 41.82 minutes.
+Runtime.totalMemory()=3847225344
+[Wed Jul 03 22:59:47 CEST 2019] picard.sam.AddOrReplaceReadGroups INPUT=MS_R_R8.dupl_rm.bam OUTPUT=MS_R_R8.bam RGID=MS_R_R8 RGLB=lib1 RGPL=illumina RGPU=unit1 RGSM=MS_R_R8    VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Wed Jul 03 22:59:47 CEST 2019] Executing as knam@node058 on Linux 3.10.0-514.26.2.el7.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_102-b14; Picard version: 2.9.4-SNAPSHOT
+INFO	2019-07-03 22:59:48	AddOrReplaceReadGroups	Created read group ID=MS_R_R8 PL=illumina LB=lib1 SM=MS_R_R8
+
+INFO	2019-07-03 23:00:14	AddOrReplaceReadGroups	Processed     1,000,000 records.  Elapsed time: 00:00:25s.  Time for last 1,000,000:   25s.  Last read position: HiC_scaffold_1:6,728,166
+INFO	2019-07-03 23:00:35	AddOrReplaceReadGroups	Processed     2,000,000 records.  Elapsed time: 00:00:47s.  Time for last 1,000,000:   21s.  Last read position: HiC_scaffold_2:986,296
+INFO	2019-07-03 23:00:56	AddOrReplaceReadGroups	Processed     3,000,000 records.  Elapsed time: 00:01:08s.  Time for last 1,000,000:   21s.  Last read position: HiC_scaffold_2:7,740,938
+INFO	2019-07-03 23:01:17	AddOrReplaceReadGroups	Processed     4,000,000 records.  Elapsed time: 00:01:29s.  Time for last 1,000,000:   21s.  Last read position: HiC_scaffold_3:1,120,884
+INFO	2019-07-03 23:01:38	AddOrReplaceReadGroups	Processed     5,000,000 records.  Elapsed time: 00:01:50s.  Time for last 1,000,000:   21s.  Last read position: HiC_scaffold_3:7,547,399
+INFO	2019-07-03 23:01:59	AddOrReplaceReadGroups	Processed     6,000,000 records.  Elapsed time: 00:02:11s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_3:13,665,727
+INFO	2019-07-03 23:02:20	AddOrReplaceReadGroups	Processed     7,000,000 records.  Elapsed time: 00:02:32s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_4:5,994,686
+INFO	2019-07-03 23:02:40	AddOrReplaceReadGroups	Processed     8,000,000 records.  Elapsed time: 00:02:52s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_4:11,733,908
+INFO	2019-07-03 23:03:01	AddOrReplaceReadGroups	Processed     9,000,000 records.  Elapsed time: 00:03:12s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_5:3,702,996
+INFO	2019-07-03 23:03:21	AddOrReplaceReadGroups	Processed    10,000,000 records.  Elapsed time: 00:03:33s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_5:10,456,679
+INFO	2019-07-03 23:03:41	AddOrReplaceReadGroups	Processed    11,000,000 records.  Elapsed time: 00:03:53s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_6:6,174,596
+INFO	2019-07-03 23:04:02	AddOrReplaceReadGroups	Processed    12,000,000 records.  Elapsed time: 00:04:14s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_7:3,091,700
+INFO	2019-07-03 23:04:22	AddOrReplaceReadGroups	Processed    13,000,000 records.  Elapsed time: 00:04:34s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_7:9,120,220
+INFO	2019-07-03 23:04:43	AddOrReplaceReadGroups	Processed    14,000,000 records.  Elapsed time: 00:04:54s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_8:2,536,451
+INFO	2019-07-03 23:05:03	AddOrReplaceReadGroups	Processed    15,000,000 records.  Elapsed time: 00:05:15s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_8:9,128,365
+INFO	2019-07-03 23:05:24	AddOrReplaceReadGroups	Processed    16,000,000 records.  Elapsed time: 00:05:35s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_9:4,346,449
+INFO	2019-07-03 23:05:44	AddOrReplaceReadGroups	Processed    17,000,000 records.  Elapsed time: 00:05:56s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_9:11,058,497
+INFO	2019-07-03 23:06:05	AddOrReplaceReadGroups	Processed    18,000,000 records.  Elapsed time: 00:06:16s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_10:5,102,966
+INFO	2019-07-03 23:06:25	AddOrReplaceReadGroups	Processed    19,000,000 records.  Elapsed time: 00:06:37s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_10:11,415,697
+INFO	2019-07-03 23:06:46	AddOrReplaceReadGroups	Processed    20,000,000 records.  Elapsed time: 00:06:57s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_11:3,950,049
+INFO	2019-07-03 23:07:06	AddOrReplaceReadGroups	Processed    21,000,000 records.  Elapsed time: 00:07:18s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_11:9,732,034
+INFO	2019-07-03 23:07:26	AddOrReplaceReadGroups	Processed    22,000,000 records.  Elapsed time: 00:07:38s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_12:1,284,993
+INFO	2019-07-03 23:07:47	AddOrReplaceReadGroups	Processed    23,000,000 records.  Elapsed time: 00:07:59s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_12:8,520,065
+INFO	2019-07-03 23:08:08	AddOrReplaceReadGroups	Processed    24,000,000 records.  Elapsed time: 00:08:20s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_12:15,998,787
+INFO	2019-07-03 23:08:29	AddOrReplaceReadGroups	Processed    25,000,000 records.  Elapsed time: 00:08:41s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_13:2,088,193
+INFO	2019-07-03 23:08:49	AddOrReplaceReadGroups	Processed    26,000,000 records.  Elapsed time: 00:09:01s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_13:8,466,082
+INFO	2019-07-03 23:09:10	AddOrReplaceReadGroups	Processed    27,000,000 records.  Elapsed time: 00:09:22s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_13:14,642,900
+INFO	2019-07-03 23:09:30	AddOrReplaceReadGroups	Processed    28,000,000 records.  Elapsed time: 00:09:42s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_14:6,520,154
+INFO	2019-07-03 23:09:51	AddOrReplaceReadGroups	Processed    29,000,000 records.  Elapsed time: 00:10:02s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_14:12,602,128
+INFO	2019-07-03 23:10:11	AddOrReplaceReadGroups	Processed    30,000,000 records.  Elapsed time: 00:10:23s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_15:5,139,888
+INFO	2019-07-03 23:10:32	AddOrReplaceReadGroups	Processed    31,000,000 records.  Elapsed time: 00:10:44s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_15:11,690,925
+INFO	2019-07-03 23:10:52	AddOrReplaceReadGroups	Processed    32,000,000 records.  Elapsed time: 00:11:04s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_16:4,969,067
+INFO	2019-07-03 23:11:13	AddOrReplaceReadGroups	Processed    33,000,000 records.  Elapsed time: 00:11:24s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_16:11,734,593
+INFO	2019-07-03 23:11:33	AddOrReplaceReadGroups	Processed    34,000,000 records.  Elapsed time: 00:11:45s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_17:6,572,444
+INFO	2019-07-03 23:11:54	AddOrReplaceReadGroups	Processed    35,000,000 records.  Elapsed time: 00:12:06s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_18:2,799,112
+INFO	2019-07-03 23:12:15	AddOrReplaceReadGroups	Processed    36,000,000 records.  Elapsed time: 00:12:26s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_18:9,780,206
+INFO	2019-07-03 23:12:35	AddOrReplaceReadGroups	Processed    37,000,000 records.  Elapsed time: 00:12:47s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_19:4,445,671
+INFO	2019-07-03 23:12:56	AddOrReplaceReadGroups	Processed    38,000,000 records.  Elapsed time: 00:13:07s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_19:10,805,158
+INFO	2019-07-03 23:13:16	AddOrReplaceReadGroups	Processed    39,000,000 records.  Elapsed time: 00:13:28s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_20:4,543,527
+INFO	2019-07-03 23:13:37	AddOrReplaceReadGroups	Processed    40,000,000 records.  Elapsed time: 00:13:49s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_21:761,845
+INFO	2019-07-03 23:13:57	AddOrReplaceReadGroups	Processed    41,000,000 records.  Elapsed time: 00:14:09s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_21:7,287,267
+INFO	2019-07-03 23:14:18	AddOrReplaceReadGroups	Processed    42,000,000 records.  Elapsed time: 00:14:30s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_22:520,808
+INFO	2019-07-03 23:14:38	AddOrReplaceReadGroups	Processed    43,000,000 records.  Elapsed time: 00:14:50s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_22:6,556,452
+INFO	2019-07-03 23:14:59	AddOrReplaceReadGroups	Processed    44,000,000 records.  Elapsed time: 00:15:11s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_23:1,596,905
+INFO	2019-07-03 23:15:20	AddOrReplaceReadGroups	Processed    45,000,000 records.  Elapsed time: 00:15:31s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_24:266,928
+INFO	2019-07-03 23:15:40	AddOrReplaceReadGroups	Processed    46,000,000 records.  Elapsed time: 00:15:52s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_24:6,703,612
+INFO	2019-07-03 23:16:00	AddOrReplaceReadGroups	Processed    47,000,000 records.  Elapsed time: 00:16:12s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_25:3,735,516
+INFO	2019-07-03 23:16:21	AddOrReplaceReadGroups	Processed    48,000,000 records.  Elapsed time: 00:16:32s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_25:9,995,693
+INFO	2019-07-03 23:16:41	AddOrReplaceReadGroups	Processed    49,000,000 records.  Elapsed time: 00:16:53s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_26:3,293,180
+INFO	2019-07-03 23:17:02	AddOrReplaceReadGroups	Processed    50,000,000 records.  Elapsed time: 00:17:14s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_27:1,294,428
+INFO	2019-07-03 23:17:22	AddOrReplaceReadGroups	Processed    51,000,000 records.  Elapsed time: 00:17:34s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_27:7,900,232
+INFO	2019-07-03 23:17:43	AddOrReplaceReadGroups	Processed    52,000,000 records.  Elapsed time: 00:17:55s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_27:14,679,010
+INFO	2019-07-03 23:18:04	AddOrReplaceReadGroups	Processed    53,000,000 records.  Elapsed time: 00:18:15s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_29:189,883
+INFO	2019-07-03 23:18:24	AddOrReplaceReadGroups	Processed    54,000,000 records.  Elapsed time: 00:18:36s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_29:8,962,470
+INFO	2019-07-03 23:18:44	AddOrReplaceReadGroups	Processed    55,000,000 records.  Elapsed time: 00:18:56s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_29:19,393,080
+INFO	2019-07-03 23:19:04	AddOrReplaceReadGroups	Processed    56,000,000 records.  Elapsed time: 00:19:16s.  Time for last 1,000,000:   20s.  Last read position: HiC_scaffold_494:8,461
+INFO	2019-07-03 23:19:23	AddOrReplaceReadGroups	Processed    57,000,000 records.  Elapsed time: 00:19:34s.  Time for last 1,000,000:   18s.  Last read position: */*
+INFO	2019-07-03 23:19:40	AddOrReplaceReadGroups	Processed    58,000,000 records.  Elapsed time: 00:19:52s.  Time for last 1,000,000:   17s.  Last read position: */*
+INFO	2019-07-03 23:19:58	AddOrReplaceReadGroups	Processed    59,000,000 records.  Elapsed time: 00:20:10s.  Time for last 1,000,000:   17s.  Last read position: */*
+INFO	2019-07-03 23:20:16	AddOrReplaceReadGroups	Processed    60,000,000 records.  Elapsed time: 00:20:28s.  Time for last 1,000,000:   17s.  Last read position: */*
+INFO	2019-07-03 23:20:34	AddOrReplaceReadGroups	Processed    61,000,000 records.  Elapsed time: 00:20:45s.  Time for last 1,000,000:   17s.  Last read position: */*
+INFO	2019-07-03 23:20:51	AddOrReplaceReadGroups	Processed    62,000,000 records.  Elapsed time: 00:21:03s.  Time for last 1,000,000:   17s.  Last read position: */*
+INFO	2019-07-03 23:21:09	AddOrReplaceReadGroups	Processed    63,000,000 records.  Elapsed time: 00:21:20s.  Time for last 1,000,000:   17s.  Last read position: */*
+INFO	2019-07-03 23:21:26	AddOrReplaceReadGroups	Processed    64,000,000 records.  Elapsed time: 00:21:38s.  Time for last 1,000,000:   17s.  Last read position: */*
+INFO	2019-07-03 23:21:44	AddOrReplaceReadGroups	Processed    65,000,000 records.  Elapsed time: 00:21:56s.  Time for last 1,000,000:   17s.  Last read position: */*
+INFO	2019-07-03 23:22:02	AddOrReplaceReadGroups	Processed    66,000,000 records.  Elapsed time: 00:22:13s.  Time for last 1,000,000:   17s.  Last read position: */*
+INFO	2019-07-03 23:22:19	AddOrReplaceReadGroups	Processed    67,000,000 records.  Elapsed time: 00:22:31s.  Time for last 1,000,000:   17s.  Last read position: */*
+INFO	2019-07-03 23:22:37	AddOrReplaceReadGroups	Processed    68,000,000 records.  Elapsed time: 00:22:49s.  Time for last 1,000,000:   17s.  Last read position: */*
+INFO	2019-07-03 23:22:55	AddOrReplaceReadGroups	Processed    69,000,000 records.  Elapsed time: 00:23:06s.  Time for last 1,000,000:   17s.  Last read position: */*
+INFO	2019-07-03 23:23:13	AddOrReplaceReadGroups	Processed    70,000,000 records.  Elapsed time: 00:23:24s.  Time for last 1,000,000:   17s.  Last read position: */*
+INFO	2019-07-03 23:23:30	AddOrReplaceReadGroups	Processed    71,000,000 records.  Elapsed time: 00:23:42s.  Time for last 1,000,000:   17s.  Last read position: */*
+INFO	2019-07-03 23:23:48	AddOrReplaceReadGroups	Processed    72,000,000 records.  Elapsed time: 00:24:00s.  Time for last 1,000,000:   17s.  Last read position: */*
+INFO	2019-07-03 23:24:06	AddOrReplaceReadGroups	Processed    73,000,000 records.  Elapsed time: 00:24:18s.  Time for last 1,000,000:   17s.  Last read position: */*
+INFO	2019-07-03 23:24:24	AddOrReplaceReadGroups	Processed    74,000,000 records.  Elapsed time: 00:24:36s.  Time for last 1,000,000:   18s.  Last read position: */*
+INFO	2019-07-03 23:24:42	AddOrReplaceReadGroups	Processed    75,000,000 records.  Elapsed time: 00:24:54s.  Time for last 1,000,000:   18s.  Last read position: */*
+INFO	2019-07-03 23:25:00	AddOrReplaceReadGroups	Processed    76,000,000 records.  Elapsed time: 00:25:12s.  Time for last 1,000,000:   18s.  Last read position: */*
+INFO	2019-07-03 23:25:18	AddOrReplaceReadGroups	Processed    77,000,000 records.  Elapsed time: 00:25:30s.  Time for last 1,000,000:   17s.  Last read position: */*
+INFO	2019-07-03 23:25:36	AddOrReplaceReadGroups	Processed    78,000,000 records.  Elapsed time: 00:25:48s.  Time for last 1,000,000:   17s.  Last read position: */*
+INFO	2019-07-03 23:25:54	AddOrReplaceReadGroups	Processed    79,000,000 records.  Elapsed time: 00:26:06s.  Time for last 1,000,000:   18s.  Last read position: */*
+INFO	2019-07-03 23:26:12	AddOrReplaceReadGroups	Processed    80,000,000 records.  Elapsed time: 00:26:24s.  Time for last 1,000,000:   17s.  Last read position: */*
+INFO	2019-07-03 23:26:30	AddOrReplaceReadGroups	Processed    81,000,000 records.  Elapsed time: 00:26:41s.  Time for last 1,000,000:   17s.  Last read position: */*
+INFO	2019-07-03 23:26:48	AddOrReplaceReadGroups	Processed    82,000,000 records.  Elapsed time: 00:26:59s.  Time for last 1,000,000:   17s.  Last read position: */*
+[Wed Jul 03 23:27:03 CEST 2019] picard.sam.AddOrReplaceReadGroups done. Elapsed time: 27.26 minutes.
+Runtime.totalMemory()=1512570880

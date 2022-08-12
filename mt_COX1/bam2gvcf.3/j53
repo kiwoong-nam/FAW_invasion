@@ -1,0 +1,9 @@
+#!/bin/bash
+#SBATCH -c 4
+#SBATCH --mem=20G
+
+cd /home/knam/work/sfrugiperda_SNP/mt/gvcf.3
+
+/home/knam/save/programs/samtools-1.9/samtools index ../bam.3/rCC20.bam
+
+/home/knam/save/programs/gatk-4.1.2.0/gatk HaplotypeCaller -R /home/knam/work/sfrugiperda_SNP/mt/ref/sfmt.ref.smrt.fa -I ../bam.3/rCC20.bam -O rCC20.g.vcf.gz -ERC GVCF
